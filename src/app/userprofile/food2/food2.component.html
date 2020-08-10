@@ -1,0 +1,18 @@
+<p id="p">
+    Today Special in {{id}}
+</p>
+
+<div>
+    <div *ngFor="let food of foods">
+        <div class="div3">
+            <img [src]="foodpic(food.fpic)" alt="pic" height="220" width="350">
+            <h1>{{food.fname}}</h1>
+            <p id="p1">{{food.fdesc}}</p>
+            <h2>Price: {{food.fprice}}/-</h2>
+            <br>
+            <div class="text-center">
+                <button (click)="onBook(food._id)" class="btn btn-primary">Book</button>
+            </div>
+        </div>
+    </div>
+</div>

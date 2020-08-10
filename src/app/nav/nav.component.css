@@ -1,0 +1,11 @@
+
+a{
+    color: yellow;
+    font-size: larger;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+a:hover{
+    color: white;
+}

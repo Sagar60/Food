@@ -1,0 +1,55 @@
+<div class="container">
+    <h1>Food Booking</h1>
+</div>
+<br>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" name="form" enctype="multipart/form-data" novalidate>
+    <input type="hidden" #_id="ngModel" [(ngModel)]="selectedFood._id" name="_id" id="">
+
+    <div class="form-group">
+        <label for="fname">Food Name</label>
+        <input type="text" #fname="ngModel"  name="fname" [(ngModel)]="selectedFood.fname" id="" class="form-control" placeholder="FoodName" readonly>
+    </div>
+
+    <div class="form-group">
+        <label for="fdesc">Food Description:</label>
+        <input type="text" name="fdesc" #fdesc="ngModel" [(ngModel)]="selectedFood.fdesc" class="form-control" readonly>
+    </div>
+
+    <div class="form-group">
+        <label for="fprice">Food Price:</label>
+        <input type="text" name="fprice" #fprice="ngModel" [(ngModel)]="selectedFood.fprice" class="form-control" readonly>
+    </div>
+
+    <div class="form-group" *ngIf="userDetails">
+        <label for="">Customer Name</label>
+        <input type="text" name="cname" #cname="ngModel" [(ngModel)]="userDetails.fullName" class="form-control" readonly>
+    </div>
+
+    <div class="form-group" *ngIf="userDetails">
+        <label for="">Customer Email</label>
+        <input type="text" name="cemail" #mail="ngModel" [(ngModel)]="userDetails.email" class="form-control" readonly >
+    </div>
+
+    <div class="form-group" *ngIf="userDetails">
+        <label for="">Phone Number</label>
+        <input type="text" name="cphone" #cphn="ngModel" [(ngModel)]="userDetails.phone" class="form-control"  >
+    </div>
+
+    <div class="form-group">
+        <label for="">Delivery Address</label>
+        <input type="text" name="caddress" #caddress="ngModel" ngModel class="form-control"  [ngClass]="{ 'is-invalid': form.submitted && caddress.invalid} " required>
+        <div class="invalid-feedback" *ngIf="form.submitted && caddress.invalid" >
+            <div *ngIf="caddress.errors.required" > Address Must be filled for order</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="">Quantity</label>
+        <input type="number" name="quan" #qname="ngModel" ngModel class="form-control" placeholder="Quantity" required>
+    </div>
+
+    <div class="text-center">
+        <button class="btn btn-primary">Order Now</button>
+    </div>
+
+</form>

@@ -1,0 +1,25 @@
+.div3{
+    float: left;
+    border: 10px solid white;
+    margin-left: 10px;
+
+}
+#p{
+    color: teal;
+    font-weight: 800;
+    font-size: x-large;
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 5%;
+    
+}
+#p1{
+    font-weight: 600;
+    font-size: larger;
+    color: rgb(40, 27, 124);
+    font-style: oblique;
+    
+}
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

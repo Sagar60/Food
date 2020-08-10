@@ -1,0 +1,15 @@
+<div class="image">
+    <h1><span>User Profile</span> </h1>
+        <div class="container">
+            <div class="box" *ngIf="userName">
+                <div class="box2">
+                    <p><img src="../../../assets/img/userp.jpg" alt="" height="250" width="250"> </p>
+                        <div class="div3">
+                        <p>Name: {{userName.fullName}}</p>
+                        <p>Email Id: {{userName.email}}</p>
+                        <p>Reg. Phone Number: {{userName.phone}}</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+</div>
